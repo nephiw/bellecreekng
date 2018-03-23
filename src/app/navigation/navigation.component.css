@@ -1,0 +1,19 @@
+@media only screen and (max-width : 720px) {
+  mat-toolbar a {
+    display: none;
+  }
+}
+  
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.logo {
+  width: 40px;
+  padding: 4px;
+  background: white;
+}
+
+.title {
+  margin-right: 15px;
+}

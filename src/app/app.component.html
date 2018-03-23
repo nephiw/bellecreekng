@@ -1,9 +1,4 @@
-<h1> {{ title }}</h1>
- 
-<p>Navigation:
-  <a [routerLink]="['/']">Home</a>
-  <a [routerLink]="['documents']">Documents</a>
-  <a [routerLink]="['cec']">CEC</a>
-  <a [routerLink]="['contacts']">Contacts</a>
-</p>
-<router-outlet></router-outlet>
+<bc-navigation></bc-navigation>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
