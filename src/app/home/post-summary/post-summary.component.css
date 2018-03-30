@@ -1,0 +1,9 @@
+.summary-container {
+  max-width: 1024px;
+  margin: 30px auto;
+  padding: 30px;
+}
+
+.continue-link {
+  text-align: right;
+}
