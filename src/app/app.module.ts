@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule, MatButtonModule, MatCardModule } from '@angular/material';
+import { MarkdownModule } from 'ngx-markdown';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,7 +28,8 @@ const materialModules = [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ...materialModules
+    ...materialModules,
+    MarkdownModule.forRoot()
   ],
   exports: [
     ...materialModules
