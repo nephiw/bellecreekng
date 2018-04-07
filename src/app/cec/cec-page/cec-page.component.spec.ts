@@ -1,14 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { CecPageComponent } from './cec-page.component';
+import { MomentPipe } from '../moment/moment.pipe';
+import { mockPipe } from '../../../testing';
 
 describe('CecPageComponent', () => {
   let component: CecPageComponent;
   let fixture: ComponentFixture<CecPageComponent>;
 
   beforeEach(async(() => {
+    const MockMomentPipe = mockPipe<MomentPipe>('bcMoment');
+
     TestBed.configureTestingModule({
-      declarations: [ CecPageComponent ]
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      declarations: [ CecPageComponent, MockMomentPipe ]
     })
     .compileComponents();
   }));
