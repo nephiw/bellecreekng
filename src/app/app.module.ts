@@ -5,11 +5,14 @@ import { MarkdownModule } from 'ngx-markdown';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { PostSummaryComponent } from './home/post-summary/post-summary.component';
+import { firebase } from '../environments/firebase.config';
 
 const materialModules = [
   MatToolbarModule,
@@ -29,7 +32,9 @@ const materialModules = [
     AppRoutingModule,
     BrowserAnimationsModule,
     ...materialModules,
-    MarkdownModule.forRoot()
+    MarkdownModule.forRoot(),
+    AngularFireModule.initializeApp(firebase),
+    AngularFirestoreModule
   ],
   exports: [
     ...materialModules
