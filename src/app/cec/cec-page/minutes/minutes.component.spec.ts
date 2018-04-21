@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { MinutesComponent } from './minutes.component';
 import { By } from '@angular/platform-browser';
-import { ActivatedRouteStub } from '../../../testing';
+import { ActivatedRouteStub } from '@test/activated-route-stub';
 
 describe('MinutesComponent', () => {
   let component: MinutesComponent;
