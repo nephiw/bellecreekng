@@ -1,5 +1,13 @@
 <h2>2017 Calendar</h2>
 
+<div class="year-group">
+  <mat-button-toggle-group (valueChange)="onYearChange($event)">
+    <mat-button-toggle *ngFor="let year of years" [value]="year">
+      {{ year }}
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+</div>
+
 <bc-minutes-calendar [months]="months"></bc-minutes-calendar>
 
 <div class="content">

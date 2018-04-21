@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatGridListModule } from '@angular/material';
+import { MatGridListModule, MatButtonToggleModule } from '@angular/material';
 import { MarkdownModule } from 'ngx-markdown';
 import * as moment from 'moment';
 
@@ -18,6 +18,7 @@ import { MinutesCalendarComponent } from './cec-page/minutes-calendar/minutes-ca
     CommonModule,
     CecRoutingModule,
     MatGridListModule,
+    MatButtonToggleModule,
     MarkdownModule.forChild(),
   ],
   declarations: [

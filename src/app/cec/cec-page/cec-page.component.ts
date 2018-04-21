@@ -8,14 +8,24 @@ import { MinutesService, CECMinute } from './minutes.service';
   templateUrl: './cec-page.component.html',
   styleUrls: ['./cec-page.component.css']
 })
-export class CecPageComponent { // implements OnInit {
+export class CecPageComponent {
   public months: any[];
+  public years: string[];
 
   // TODO: Move AngularFire logic to a service
   // TODO: Sort values that are returned by date
   // TODO: Group by year.
   constructor(private minutesService: MinutesService) {
-    this.minutesService.getMinutesByYear('2017').subscribe((months: CECMinute[]) => {
+    this.minutesService.getMinutesByYear('2017').subscribe((months: any[]) => {
+      this.months = months;
+    });
+
+    this.years = ['2015', '2016', '2017', '2018'];
+  }
+
+  public onYearChange(year: string): void {
+    console.log(year);
+    this.minutesService.getMinutesByYear(year).subscribe((months: any[]) => {
       this.months = months;
     });
   }
