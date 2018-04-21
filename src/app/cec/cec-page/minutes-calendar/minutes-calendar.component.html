@@ -1,0 +1,9 @@
+<div class="calendar">
+  <mat-grid-list cols="4" rowHeight="1:1">
+    <mat-grid-tile *ngFor="let month of months"
+                   [routerLink]="['minutes', month.filename]"
+                   [class.active]="month.met">
+      {{ month.date | bcMoment: 'MMM' }}
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

@@ -2,13 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatGridListModule } from '@angular/material';
 import { MarkdownModule } from 'ngx-markdown';
+import * as moment from 'moment';
 
 import { CecRoutingModule } from './cec-routing.module';
-import { CecPageComponent } from './cec-page/cec-page.component';
-import { MinutesComponent } from './minutes/minutes.component';
-import { MinutesService } from './cec-page/minutes.service';
 import { MomentPipe } from './moment/moment.pipe';
-import * as moment from 'moment';
+import {
+  CecPageComponent,
+  MinutesComponent,
+  MinutesService
+} from './cec-page';
+import { MinutesCalendarComponent } from './cec-page/minutes-calendar/minutes-calendar.component';
 
 @NgModule({
   imports: [
@@ -20,7 +23,8 @@ import * as moment from 'moment';
   declarations: [
     CecPageComponent,
     MinutesComponent,
-    MomentPipe
+    MomentPipe,
+    MinutesCalendarComponent
   ],
   providers: [
     { provide: 'moment', useValue: moment },
